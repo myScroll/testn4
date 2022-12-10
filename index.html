@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <title>Document</title>
+    <style>
+        img{width: 100px;}
+        *{
+        box-sizing: border-box;
+    }
+        a,
+        body{
+            color: #fafafa;
+            text-decoration: none;
+            font-style: italic;
+        }
+        body{
+            margin:0%;
+            padding:0%;
+            background-image: url('html/teslaB.jpg');
+            background-size: 316%;
+    background-position: top;
+        }
+nav{
+background:rgb(100,0,1);
+padding:20px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+/*first nav div nissan logo*/
+nav img{
+    width: 70px;
+    border-radius: 4px;
+}
+/*second nav div logo*/
+.dadnav{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows:1fr 1fr 1fr;
+width:70px;
+height:70px;
+margin:auto 0;
+line-height:1.6;
+gap:2px;
+justify-content:center;
+align-content:center;
+}
+.dadinner{
+margin:1px;
+background:rgb(160,0,47);
+border-radius:2px;
+box-shadow:-1px -1px 5px #000010;
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+/*third nav div ooen side bar*/
+nav .open{
+align-items:center;
+justify-content:center;
+display:flex;
+flex-direction:column;
+width: 70px;
+height: 70px;
+}
+nav span{
+    width: 39px;
+    height: 5px;
+    margin: 1.5px;
+    border-radius: 3px;
+    background-color: #a0002f;
+    border: solid #a14f67 .1px;
+}
+
+/********************/
+/*side bar */
+nav span{
+    width: 39px;
+    height: 6px;
+    margin: 1.5px;
+    border-radius: 3px;
+    background-color: #f3dede;
+}
+/*side bar*/
+.sidebar{
+background-color:#ffe4c4;
+display:none;
+opacity:90%;
+width: 45%;
+min-height: 50vh;
+z-index: 999;
+border-bottom-left-radius: 4px;
+}
+.sidebar div{
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+    height: 245px;
+    line-height: 245px;
+    z-index: 999;
+    border-bottom: solid 0.5px;
+    font-size: 40px;
+}
+.sidebar div:last-child{
+    border:none
+}
+.sidebar div:hover{
+    font-weight: bold;
+    font-style:italic;
+    transition: all .5s;
+}
+.bigdiv{
+    display: grid;
+    width: 100%;
+    padding: 10px 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 4.5px;
+    margin-top: 108px;
+}
+.bigdiv a,
+.bigdiv div{
+    background-color: #a0002fd6;
+    display: grid;
+    grid-template-rows: 1fr.5px auto;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+}
+.bigdiv a img,
+.bigdiv a i{
+    width: 60%;
+    font-size: 30px;
+    margin: 0 auto;
+    
+}
+.bigdiv div img,
+.bigdiv div i{
+    width: 60%;
+    font-size: 30px;
+    margin: 0 auto;
+    
+}
+
+a hr,
+div hr{
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    top: -22px;
+}
+/*.bigdiv a h3,
+.bigdiv div h3*/
+a h3,
+div h3{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 21px;
+    position: relative;
+    bottom: 9px;
+}
+/*main box 2*/
+
+.rent-car{
+    margin:0;
+    padding:0;
+}
+.msg{
+    position: fixed;
+    bottom: 10px;
+    z-index: 10000;
+    right: 10px;
+    width: 120px;
+    height:120px;
+    overflow: hidden;
+    border:solid 3px #000;
+    border-radius: 50%;
+}
+
+/*services-option  page*************************************/
+.services-option{
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    margin: 0 auto;
+    width: 100%;
+    display: none;
+}
+.services-option div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    margin: 0 auto;
+    gap: 5px;
+    grid-template-rows: repeat(1, 250px);
+}
+.services-option div .inner{
+    background-color: #c7fbc699;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 42px;
+    width: 100%;
+}
+.services-option hr{
+color: #000;
+}
+.services-option h3{
+color: #000;
+}
+/*services-option  page*************************************/
+.spear-part-page{
+    display: none;
+    /* height: 100vh; */
+    width: 100%;
+    
+    text-align: center;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+.spear-part-page div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    gap: 5px;
+    grid-template-rows: repeat(1, 250px);
+}
+.spear-part-page div .spear-part-barnds{
+    background-color: #c7fbc6a4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+.spear-part-barnds:first-child{
+    background-image: url("/image/nissan-logo-2020-white.png");
+}
+.spear-part-barnds h3{
+
+}
+
+/*services-option  page*************************************/
+/*js work*/
+.open{
+    display: block;
+}
+.open-js{
+    display: block;
+}
+.close-js{
+    display: none;
+}
+/*
+<i class="fa-solid fa-car"></i>
+
+--car icons
+
+<i class="fa-duotone fa-car"></i>
+--loction
+
+
+
+<i class="fa-sharp fa-solid fa-car-building"></i>
+<i class="fa-solid fa-car-building"></i>
+<i class="fa-sharp fa-solid fa-house-chimney-user"></i>
+--Home
+
+<i class="fa-regular fa-screwdriver-wrench"></i>
+--spare parts
+
+<i class="fa-regular fa-messages"></i>
+--chats
+*/
+    </style>
+</head>
+<body>
+    
+        <!--<i class="fa-duotone fa-car"></i>
+    <i class="fa-sharp fa-solid fa-car-building"></i>
+<i class="fa-solid fa-car-building"></i>
+<i class="fa-sharp fa-solid fa-house-chimney-user"></i>-->
+    <!--nav div-->
+        <nav>
+        <!--First div nissan logo-->
+        <a href="html/nissanparts.html"><img src="image/nissan-logo-2020-white.png"></a>
+        <!--second div logo-->
+        <div class="dadnav">
+        
+        <div style="border-bottom-right-radius:8.333px;background-image:url('image/nissan-logo-2020-white.png');background-size:100%;background-position: center;
+        background-repeat: no-repeat;;
+        opacity:80%;" class="dadinner">
+        </div>
+        <div class="dadinner"><a href="/html/index.html"></a></div>
+        <div class="dadinner"></div>
+        <div class="dadinner"></div>
+        <div class="dadinner"></div>
+        <div class="dadinner"></div>
+        <div class="dadinner"></div>
+        <div class="dadinner"></div>
+        <div class="dadinner"></div>
+        
+        </div>
+        <!--third open sidebar-->
+        <div class="open">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        </nav>
+
+
+        <!--services-option page----------------------->
+        <div class="services-option">
+            <div>
+            
+            <a href="html/nissanparts.html" class="inner spear-parts-btn">
+                <img style="position:relative;top:16px;width:42%;top:27px;" src="car-servicses-icon-removebg-preview.png" alt="" srcset="">
+                <hr>
+                <h3 style="position: relative;top:-43px;font-weight: bold;">Car Servises</h3>
+            </a>
+
+            <a href="" class="inner home1">
+                <img style="width:61%;position:relative;top:20px;" src="m-work-icon-removebg-preview.png" alt="" srcset="">
+                <hr>
+                <h3 style="position:relative;top:-43px;font-weight:bold;">bulding Servises</h3>
+            </a>
+
+            </div>
+        </div>
+        <!--services-option page----------------------->
+        <div class="spear-part-page">
+            <div>
+                <a href="html/nissanparts.html" class="spear-part-barnds"></a>
+
+                <a class="spear-part-barnds"><h3>SOON ..</h3></a>
+
+                <a class="spear-part-barnds"><h3>SOON ..</h3></a>
+            </div>
+        </div>
+
+
+        <!--services-option page 2----------------------->
+        <div class="container-hidden">
+        <!--side bar-->
+    <div style="position:absolute;right:0;min-height:40vh;border:solid .5px;" class="sidebar">
+    <div>Y60</div>
+    <div>Y61</div>
+    <div>Y62</div>
+    </div>
+
+
+    <!--in the main box-->
+
+    <!--in the main box 2-->
+<div class="bigdiv">
+    <!--First Box-->
+<div class="home1 Iparts" href="">
+    <img style="padding-bottom: 0%;" src="image/spearparticon-removebg-preview.png" alt="">
+    <hr>
+    <h3>Services And Parts</h3>
+</div>
+<!--Secound Box-->
+<a class="home1" href="">
+    <img src="" alt="" srcset="">
+    <hr>
+    <h3>Insuranse</h3>
+</a>
+<!--Third Box-->
+<a class="home1" href="">
+    <img style="width:40%;position:relative;top:11px;" src="../nissanpartsfile//foodZone-icon-removebg-preview.png" alt="" srcset="">
+    <hr>
+    <h3>Food Zone</h3>
+</a>
+
+<!--Forth Box-->
+<a class="home1" href="/html/baycar.html">
+    <i style="margin-top: 24px;font-size:60px ;position: relative;top: 23px;" class="fa fa-car"></i>
+    <hr>
+    <h3>CARS</h3>
+</a>
+<!--5 and center-->
+<a class="home1" href="">
+    <img  style="padding:0%;position: relative;bottom: 5px;"src="image/homeicon-removebg-preview.png" alt="" srcset="">
+    <hr>
+    <h3>Home Zone</h3>
+</a>
+<!--6 Box-->
+<a class="home1" href="">
+
+</a>
+<!--Seventh Box-->
+<a class="home1" href="">
+    <i class="fa-duotone fa-car"></i>
+    <hr>
+    <h3>Soon</h3>
+</a>
+<!--Box N 8-->
+<a class="home1" href="">
+<i class="fa-brands fa-instagram"></i>
+    <hr>
+    <h3>Media</h3>
+</a>
+
+<!--Box N Night-->
+<a class="rent-car home1" href="">
+    <img style="border:none;width: 40%;" src="image/keyicon-removebg-preview.png" alt="" srcset="">
+    <hr>
+    <h3>Rent car</h3>
+</a>
+</div>
+    </div>
+    <!--js-->
+    <div id="hello">Hello</div>
+<script>
+    document.querySelector(".open").onclick = function(){
+    document.querySelector(".sidebar").classList.toggle("sidebar-js")
+    }
+
+    /*document.querySelector(".bigdivv").onclick = function(){
+        this.style.cssText = 'transition: all .5s';
+    }*/
+    /*document.querySelector(".home").onclick = function(){
+        this.style.cssText = 'border-bottom-right-radius:33.5px';
+    }*/
+    /*document.querySelector(".home").onclick = function(){
+        this.style.cssText = 'border-bottom-right-radius:33.5px';
+    }*/
+    bigg = document.querySelectorAll(".bigdiv a");
+    bigg.forEach(a=>{
+        a.addEventListener('click', ()=>{
+            a.style.cssText = 'border-bottom-right-radius:33.5px';
+        })
+        
+    })
+    //servicses 
+    bigg = document.querySelectorAll(".services-option .inner");
+    bigg.forEach(a=>{
+        a.addEventListener('click', ()=>{
+            a.style.cssText = 'border-bottom-right-radius:33.5px';
+        })
+        
+    })
+    document.querySelector(".Iparts").onclick = function(){
+        document.querySelector(".container-hidden").classList.toggle("close-js");
+        document.querySelector(".services-option").classList.toggle("open-js");
+    };
+    // hello.style.cssText = "font-size:40px;text-align:center;padding:30px 0px;font-style:italic;";
+    // hello.innerHTML = "Hello MR Abdullah"
+
+    //مسطلحات مهمه جدا
+    // Global |
+    // Declare | Declare A Variable and Use | Declare mean(var used = 1;)now we have declare it
+    // Access | 
+    // 
+
+
+
+
+
+
+
+
+
+
+
+    // 1. (console) //testing //document.write("<h3>hi from JS<h3/>");
+    //  
+    // 2. window.onload = function(){
+    //     document.querySelector("h1").style.color = "Blue";
+    // }
+    //
+    // 3. How To wright Comment 1. // 2. /**/ 3. ctrl + /
+    //
+    // 4. show in page browser
+    // 1. window.
+    //    window.alert("Hello From web Page"); its A masage
+    //
+    // 2. document.
+    //    document.write("<h1>Hello From JS Page</h1>"); // create // ele + text
+    //    document.querySelector("h1").style.cssText = "text-align:center;color:red;background-color:#aaa;border-radius:8px;" // find ele
+    //
+    // 3. console.
+    //    console.log("Hello From JS");
+    //    console.error("تحذر");
+    //    console.table(["Abood", "Osama","Ahmed"]);
+    //    console.log("Hello %c From %cJS", "font-size:30px;color:red;", "font-size:40px;color:blue");
+    //
+    //
+    // 4. EM6 معاايير معينه لتنظيم وظائف العمل او لتسهيلها
+    // var my = " Osama"
+    // console.log("Hello" + my);
+    // console.log(`Hello ${my}`);
+    //
+    //
+    // 5. data types intro  انواع البيانات // a. String b. Numbers c. Array =>(Object) d. Object e. Boolean
+    //f. Undefined s. Null
+    //
+    // a. string 
+    // console.log("Osama Ali");
+    // console.log(typeof "Osama Ali");
+    //
+    // b. Number
+    // console.log(typeof 5000);
+    //
+    // c. Array => (object) 
+    // console.log(typeof [10, 12, 15])
+    // console.log(typeof ["AH", "MR", "SM"])
+    //
+    // d. Object =>(object)
+    // console.log(typeof {Name: "Ahmed", Age: 17, Cantry: "UAE"});
+    //
+    // e. Boolean 
+    // console.log(typeof true); or False
+    //
+    // f. Undefined
+    // console.log(typeof undefined)
+    //
+    // s. Null => (Object)
+    // console.log(typeof null)
+    //
+    //
+    // 6. Variable Intro -- Keywrod | var name | Assignment operator 
+    //
+    // a. var(Keywrod) user(var name) =(Assignment operator) 1(variable value); لذلك انا اكلف المهمه للمتغير يوسر |يعني انته عليك المهمه ذي او التكليف المعين
+    //    بمعتا ان المكلف المتغير يوزر والمكلف به  النتيجه 1 واداة التكليف ال= اليساوي
+    //   
+    // b. <div id="Hello">Hello</div> | it mean that you have variable any were in Global that we can try to access and find it
+    //    console.log(Hello); | <div id="Hello">Hello</div>
+    //
+    //    Hello.innerHTML = "Hello Abdullah"; | <div id="Hello">Hello Abdullah</div>
+    //
+      
+
+    </script>
+    <a href="http://"><img class="msg" src="image/chaticon-removebg-preview.png" alt="" srcset=""></a>
+</body>
+</html>

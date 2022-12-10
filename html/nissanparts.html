@@ -1,0 +1,277 @@
+<html>
+<head>
+<title>flex box</title>
+<link type="text/css" />
+<style>
+    *{
+        box-sizing: border-box;
+    }
+nav{
+background:rgb(100,0,1);
+padding:20px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+/*first nav div nissan logo*/
+nav img{
+    width: 70px;
+    border-radius: 4px;
+}
+/*second nav div logo*/
+.dadnav{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows:1fr 1fr 1fr;
+width:70px;
+height:70px;
+margin:auto 0;
+line-height:1.6;
+gap:2px;
+justify-content:center;
+align-content:center;
+}
+.dadinner{
+margin:1px;
+background:rgb(160,0,47);
+border-radius:2px;
+box-shadow:-1px -1px 5px #000010;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+/*third nav div ooen side bar*/
+nav .open{
+align-items:center;
+justify-content:center;
+display:flex;
+flex-direction:column;
+width: 70px;
+height: 70px;
+}
+nav span{
+    width: 39px;
+    height: 6px;
+    margin: 1.5px;
+    border-radius: 3px;
+    background-color: #f3dede;
+}
+/*side bar*/
+.sidebar{
+background-color:#ffe4c4;
+display:none;
+opacity:90%;
+width: 45%;
+min-height: 50vh;
+z-index: 999;
+border-bottom-left-radius: 4px;
+
+}
+.sidebar div{
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+    height: 245px;
+    line-height: 245px;
+    z-index: 999;
+    border-bottom: solid 0.5px;
+    font-size: 40px;
+
+}
+.sidebar div:last-child{
+    border:none
+}
+.sidebar div:hover{
+    font-weight: bold;
+    font-style:italic;
+    transition: all .5s;
+}
+/*main box*/
+.bigdiv{
+
+}
+.bigdiv div{
+
+}
+
+/*my flex box*/
+.mybox{
+display:flex;
+justify-content:space-between;
+padding:10px 6%;
+flex-wrap:wrap;
+}
+.mybox div{
+width:40%;
+position: relative;
+overflow: hidden;
+}
+.mybox div::before{
+    /*content: '1';
+    background-color: #aaa9;
+    width: 90%;
+    position: absolute;
+    top: 40%;
+    margin: 0 auto;
+    border-radius:2px;
+    text-align: center;*/
+}
+.mybox div img{
+width:100%;
+height:385px;
+border:solid 2.5px #fafafa;
+outline: solid .5px #ffeeee;
+border-radius:8px
+}
+.mybox div hr{
+width:96%;
+
+}
+.mybox div h4{
+text-align:center;
+font-style:sans-serif;
+
+}
+.mybox div .price-h2{
+    position: absolute;
+    margin: 0%;
+    top: 30%;
+    width: 0%;
+    background-color: rgba(255, 170, 255, 0.555);
+    text-align: center;
+    min-height: 118px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 0;
+    transition: all .5s;
+    font-style: italic;
+}
+.mybox div .price-h2 hr{
+width:60%;
+color:#000;
+background-color:#000;
+}
+
+
+
+/*js styles*/
+.mybox div .js-price{
+    width:80%;
+    font-size:25px;
+}
+.sidebar-js{
+display:block;
+}
+</style>
+</head>
+<body style="padding:0;margin:0;font-size:20px;">
+<nav>
+<!--First div nissan logo-->
+<img src="../image/nissan-logo-2020-white.png">
+<!--second div logo-->
+<div class="dadnav">
+
+<div style="border-bottom-right-radius:8.333px;background-image:url('nissanlogo11.png');background-size:contain;
+opacity:80%;" class="dadinner">
+</div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+
+</div>
+<!--third open sidebar-->
+<div class="open">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>
+<!--side bar-->
+<div style="position:absolute;right:0;min-height:40vh;border:solid .5px;" class="sidebar">
+<div>Y60</div>
+<div>Y61</div>
+<div>Y62</div>
+</div>
+<!--in the main box-->
+<div class="bigdiv">
+<img src="NISSAN.jpg" style="width:100%;background-color:dark-red">
+<hr style="width:97%;margin-top:15px;color:#000;">
+</div>
+<!--my flex div(mybox)-->
+<div class="mybox">
+
+<!--First Photo-->
+<div class="mybox-inner">
+    <h2 class="price-h2">AED 120</h2>
+<img src="jz8gear.jpg">
+<hr>
+<h4>Y61 Head Gear B</h4>
+</div>
+
+<!--Second Photo-->
+<div class="mybox-inner">
+    <h2 class="price-h2">AED 120</h2>
+<img src="y61HeadGearBR.jpg">
+<hr>
+<h4>Y61 Head Gear BR</h4>
+</div>
+
+<!--First Phote | Scound Line-->
+<div class="mybox-inner">
+    <h2 class="price-h2">AED 385</h2>
+    <img src="jz8shortbumper.jpg">
+    <hr>
+    <h4>Y61 Front Bumper</h4>
+</div>
+<!--Scound Photo | Scound Line-->
+<div class="mybox-inner">
+    <h2 class="price-h2">Origenal<hr> AED 190</h2>
+    <img src="y61foodTableB.png">
+    <hr>
+    <h4>Y61 Food Table</h4>
+</div>
+<!--First Photo | Third Line-->
+<div class="mybox-inner">
+    <img src="y611.png">
+    <hr>
+    <h4>Y61 Part
+    </h4>
+</div>
+<!--Scound Photo | Third Line-->
+<div class="mybox-inner">
+    <img src="y61carpetLB.png">
+    <hr>
+    <h4>Y61 Black Carpet</h4>
+</div>
+
+</div>
+
+
+
+
+
+
+<!--js-->
+<script>
+document.querySelector(".open").onclick = function(){
+document.querySelector(".sidebar").classList.toggle("sidebar-js")
+}
+price = document.querySelectorAll(".mybox .mybox-inner");
+price.forEach(li =>{
+li.addEventListener('click', () =>{
+
+})
+}
+)
+</script>
+</body>
+</html>
